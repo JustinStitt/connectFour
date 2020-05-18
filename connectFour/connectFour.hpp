@@ -138,7 +138,7 @@ bool connectFour::check_for_win(matrix& _board, coord move)
 	//TL to BR
 	for (int x{}; x < ROWS - 3; ++x)
 	{
-		for (int y{}; y < COLS - 3; ++y)
+		for (int y{}; y < COLS - 2; ++y)
 		{
 			if (_board[x][y] == _player_num &&
 				_board[x + 1][y + 1] == _player_num &&
@@ -150,7 +150,7 @@ bool connectFour::check_for_win(matrix& _board, coord move)
 	//TR to BL
 	for (int x{}; x < ROWS - 3; ++x)
 	{
-		for (int y = COLS - 1; y > 3; --y)
+		for (int y = COLS - 1; y > 2; --y)
 		{
 			if (_board[x][y] == _player_num &&
 				_board[x + 1][y - 1] == _player_num &&
